@@ -1,0 +1,36 @@
+{
+    "header": {
+        "title": "JRV",
+        "home": "Home",
+        "about_me": "About me",
+        "projects": "Projects",
+        "skills": "Skills",
+        "contact": "Contact Me"
+    },
+    "hero": {
+        "phrase": "Be the best version of yourself",
+        "career": "Computer Systems Engineer",
+        "button": "Send message"
+    },
+    "about": {
+        "title": "ABOUT ME",
+        "description": "I consider myself a responsible and committed person who likes to face new challenges. I like to work in a team, help others and learn new things. I seek to apply the knowledge acquired that will allow me to enrich my professional development.",
+        "button": "Download CV"
+    },
+    "projects": {
+        "title": "PROJECTS"
+    },
+    "skills": {
+        "title": "SKILLS"
+    },
+    "contact": {
+        "title": "CONTACT ME",
+        "email": "Email",
+        "message": "Write your message",
+        "button": "SEND"
+    },
+    "footer": {
+        "email": "Email",
+        "phone": "Phone"
+    }
+}

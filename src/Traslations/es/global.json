@@ -1,0 +1,36 @@
+{
+    "header": {
+        "title": "JRV",
+        "home": "Inicio",
+        "about_me": "Sobre Mi",
+        "projects": "Portafolio",
+        "skills": "Habilidades",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "phrase": "Sé la mejor versión de ti mismo",
+        "career": "Ing. Sistemas Computacionales",
+        "button": "Envía mensaje"
+    },
+    "about": {
+        "title": "SOBRE MI",
+        "description": "Me considero una persona responsable y comprometida que le gusta enfrentarse a nuevos retos. Me gusta trabajar en equipo, ayudar a los demás y aprender nuevas cosas. Busco aplicar los conocimientos adquiridos que me permitan enriquecer mi desarrollo profesional.",
+        "button": "Descargar CV"
+    },
+    "projects": {
+        "title": "PORTAFOLIO"
+    },
+    "skills": {
+        "title": "HABILIDADES"
+    },
+    "contact": {
+        "title": "CONTACTO",
+        "email": "Correo Electronico",
+        "message": "Escribe tu mensaje",
+        "button": "ENVIAR"
+    },
+    "footer": {
+        "email": "Correo Electronico",
+        "phone": "Teléfono"
+    }
+}
