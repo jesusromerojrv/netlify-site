@@ -88,7 +88,9 @@ export function ImgFija() {
               <Image
                 style={{ textAlign: "center" }}
                 width={"250px"}
+                height={"auto"}
                 src={perfilResponsive}
+                alt="JRV"
               />
             </Box>
             <Col

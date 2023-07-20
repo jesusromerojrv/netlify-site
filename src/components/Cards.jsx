@@ -175,6 +175,7 @@ export function Venta({ open, handleClose, item }) {
                     height: "100%",
                   }}
                   src={x}
+                  alt={x.title}
                 />
               </Carousel.Item>
             ))}

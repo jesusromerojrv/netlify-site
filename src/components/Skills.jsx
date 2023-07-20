@@ -2,61 +2,74 @@ import { Container } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
+//IMAGENES DE LAS SKILLS
+import img1 from "../assets/skills/css3.webp";
+import img2 from "../assets/skills/html.webp";
+import img3 from "../assets/skills/javascript.webp";
+import img4 from "../assets/skills/vuejs.webp";
+import img5 from "../assets/skills/react.webp";
+import img6 from "../assets/skills/nodejs.webp";
+import img7 from "../assets/skills/mongodb.webp";
+import img8 from "../assets/skills/mysql.webp";
+import img9 from "../assets/skills/sqlserver.webp";
+import img10 from "../assets/skills/git.webp";
+import img11 from "../assets/skills/java.webp";
+import img12 from "../assets/skills/python.webp";
+
+//------------------------
+
 const skills = [
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png",
+    img: img1,
     title: "CSS",
   },
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/800px-HTML5_Badge.svg.png",
+    img: img2,
     title: "HTML",
   },
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+    img: img3,
     title: "JAVASCRIPT",
   },
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png",
+    img: img4,
     title: "VUE JS",
   },
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+    img: img5,
     title: "REACT",
   },
   {
-    img: "https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png",
+    img: img6,
     title: "NODE JS",
   },
   {
-    img: "https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_logo_icon_146424.png",
+    img: img7,
     title: "MongoDB",
   },
   {
-    img: "https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo.png",
+    img: img8,
     title: "MySQL",
   },
   {
-    img: "https://cyclr.com/wp-content/uploads/2022/03/ext-550.png",
+    img: img9,
     title: "SQL Server",
   },
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png",
+    img: img10,
     title: "Git",
   },
   {
-    img: "https://1000marcas.net/wp-content/uploads/2020/11/Java-logo.png",
+    img: img11,
     title: "Java",
   },
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
+    img: img12,
     title: "Python",
   },
 ];
@@ -106,6 +119,7 @@ export default function About() {
                           height: "75px",
                         }}
                         src={item.img}
+                        alt={item.title}
                       />
                     </Stack>
                   </Grid>

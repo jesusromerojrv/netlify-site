@@ -28,14 +28,12 @@ export default function Contacto() {
       <TextField
         fullWidth
         label={t("contact.email")}
-        id="fullWidth"
         sx={{ backgroundColor: "#fff" }}
       />
       <br />
       <br />
       <TextField
         fullWidth
-        id="fullWidth"
         label={t("contact.message")}
         multiline
         rows={10}

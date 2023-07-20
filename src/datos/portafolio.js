@@ -62,7 +62,7 @@ export const proyectos = [
     img: p2,
     title: "Kittenbook",
     description:
-      "Actualizacion del portal electronico de la universidad, implementando nuevas tecnologias.",
+      "Software enfocado a la organización de los estudiantes, se puede añadir todo los relacionado a algúna materia como por ejemplo, creditos complementarios, notas, tareas, calificación.",
     moreImg: [p2_1, p2_2, p2_3, p2_4, p2_5, p2_6, p2_7, p2_8, p2_9, p2_10, p2_11, p2_12],
   },
   {
@@ -70,7 +70,7 @@ export const proyectos = [
     img: p4,
     title: "Sistema",
     description:
-      "Creación de aplicacion web usando MongoDB, NodeJS, Vue y Express como tecnologías. Cuenta con tres roles diferentes",
+      "Sistema de compra y venta de articulos, en el cúal se tienen tres roles: administrador, vendedor y comprador. Cada rol tiene ciertas funcionalidades disponibles a excepcion del administrador.",
     moreImg: [p4_1, p4_2, p4_3, p4_4, p4_5, p4_6, p4_7, p4_8],
   }
 ];
