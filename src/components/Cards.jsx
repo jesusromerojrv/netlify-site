@@ -17,13 +17,11 @@ import Carousel from "react-bootstrap/Carousel";
 import { proyectos } from "../datos/portafolio";
 import { useTranslation } from "react-i18next";
 import styledComponents from "styled-components";
-import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
-
-
+import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -75,12 +73,12 @@ BootstrapDialogTitle.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
+let asf = [];
+
 export default function Cards() {
   const [t] = useTranslation("global");
   const [open, setOpen] = React.useState(false);
   const [elementos, setElementos] = React.useState([]);
-  let asf = [];
-
   const handleClickOpen = (e) => {
     setOpen(true);
     asf = JSON.stringify(e);
@@ -92,10 +90,7 @@ export default function Cards() {
   };
 
   return (
-    <DivStyle
-      style={{ padding: "2% 10% 2% 10%" }}
-      id="portafolio"
-    >
+    <DivStyle style={{ padding: "2% 10% 2% 10%" }} id="portafolio">
       <Container
         maxWidth="MD"
         sx={{
@@ -136,23 +131,21 @@ export default function Cards() {
                       src={item.img}
                     />
                   </Item>
-                  <Venta
-                    open={open}
-                    handleClose={handleClose}
-                    item={elementos}
-                  />
                 </Grid>
               )
             )}
           </Grid>
         </Row>
       </Container>
+      {
+        open ? <Venta open={open} handleClose={handleClose} item={elementos} /> : null
+      }
     </DivStyle>
   );
 }
 
 export function Venta({ open, handleClose, item }) {
-  const [value, setValue] = React.useState('1');
+  const [value, setValue] = React.useState("1");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -172,7 +165,7 @@ export function Venta({ open, handleClose, item }) {
           {item.title}
         </BootstrapDialogTitle>
         <DialogContent dividers style={{}}>
-          <Carousel >
+          <Carousel>
             {item.moreImg?.map((x, index) => (
               <Carousel.Item key={index} interval={5000}>
                 <Image
