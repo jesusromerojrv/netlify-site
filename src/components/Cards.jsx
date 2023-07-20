@@ -129,6 +129,7 @@ export default function Cards() {
                         cursor: "pointer",
                       }}
                       src={item.img}
+                      alt={item.title}
                     />
                   </Item>
                 </Grid>
@@ -175,7 +176,7 @@ export function Venta({ open, handleClose, item }) {
                     height: "100%",
                   }}
                   src={x}
-                  alt={x.title}
+                  alt={index}
                 />
               </Carousel.Item>
             ))}

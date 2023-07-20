@@ -141,6 +141,7 @@ export function ImgFija() {
                   style={{ textAlign: "center" }}
                   className="responsive2"
                   src={bannerImg}
+                  alt="JRV"
                 />
               </Box>
             </Col>

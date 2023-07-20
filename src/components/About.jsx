@@ -48,9 +48,9 @@ export default function About() {
                     style={{
                       textAlign: "center",
                       padding: "2%",
-                      width: "100%",
-                      height: "auto"
                     }}
+                    width= "100%"
+                    height= "auto"
                     src="https://us.123rf.com/450wm/dotshock/dotshock1602/dotshock160200726/52352665-negocio-de-inicio-desarrollador-de-software-trabajando-en-equipo-en-la-oficina-moderna.jpg?ver=6"
                     alt="JRV"
                   />
