@@ -43,7 +43,7 @@ export default function Contacto() {
       <br />
       <Button
         variant="outline-light"
-        style={{ width: "100%", background: "#efb810" }}
+        style={{ width: "100%", background: "#efb810", color: "#1C2130"}}
       >
         {t("contact.button")}
       </Button>

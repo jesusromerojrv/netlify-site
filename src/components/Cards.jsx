@@ -18,11 +18,13 @@ import { proyectos } from "../datos/portafolio";
 import { useTranslation } from "react-i18next";
 import styledComponents from "styled-components";
 import Box from "@mui/material/Box";
-import Tab from "@mui/material/Tab";
-import TabContext from "@mui/lab/TabContext";
-import TabList from "@mui/lab/TabList";
-import TabPanel from "@mui/lab/TabPanel";
 import Stack from "@mui/material/Stack";
+
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+
+import { Skeleton } from "@mui/material";
+import { useState, useEffect } from "react";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -119,7 +121,7 @@ export default function Cards() {
               ) => (
                 <Grid item xs={12} sm={12} md={4} key={index}>
                   <Item
-                    style={{ height: "250px" }}
+                    style={{ height: "250px", }}
                     onClick={() => handleClickOpen(item)}
                   >
                     <Image
@@ -152,6 +154,13 @@ export function Venta({ open, handleClose, item }) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
   return (
     <div>
       <BootstrapDialog
@@ -166,24 +175,33 @@ export function Venta({ open, handleClose, item }) {
         >
           {item.title}
         </BootstrapDialogTitle>
-        <DialogContent dividers style={{ height: "500px", width: "600px" }}>
-          <Box sx={{ width: "100%", typography: "body1" }}>
-            <TabContext value={value}>
-              <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-                <TabList
-                  onChange={handleChange}
-                  aria-label="lab API tabs example"
-                >
-                  <Tab label="Imágenes" value="1" />
-                  <Tab label="Descripción" value="2" />
-                  <Tab label="Tecnologías" value="3" />
-                </TabList>
-              </Box>
-              <TabPanel value="1">
-                {" "}
-                <Carousel>
-                  {item.moreImg?.map((x, index) => (
-                    <Carousel.Item key={index} interval={5000}>
+        <DialogContent
+          dividers
+          sx={{
+            width: { lg: "600px", xs: "auto" },
+            height: { lg: "500px", xs: "400px" },
+          }}
+        >
+          <Tabs
+            defaultActiveKey="home"
+            transition={false}
+            id="noanim-tab-example"
+            className="mb-3"
+          >
+            <Tab eventKey="home" title="Imagenes">
+              <Carousel>
+                {item.moreImg?.map((x, index) => (
+                  <Carousel.Item key={index} interval={5000}>
+                    {loading ? (
+                      <Skeleton
+                        variant="rectangular"
+                        sx={{
+                          width: { lg: "600px", xs: "auto" },
+                          height: { lg: "500px", xs: "400px" },
+                        }}
+                        animation="wave"
+                      />
+                    ) : (
                       <Image
                         style={{
                           objectFit: "cover",
@@ -193,42 +211,42 @@ export function Venta({ open, handleClose, item }) {
                         src={x}
                         alt={index}
                       />
-                    </Carousel.Item>
-                  ))}
-                </Carousel>
-              </TabPanel>
-              <TabPanel value="2">
-                {item.description.map((desc, index) => (
-                  <Typography variant="body1" gutterBottom>
-                    {desc}
-                  </Typography>
+                    )}
+                  </Carousel.Item>
                 ))}
-              </TabPanel>
-              <TabPanel value="3">
-                <Grid container rowSpacing={5}>
-                  {item.skills.map((item, index) => (
-                    <Grid item xs={12} sm={4} md={3} key={index}>
-                      <Stack
-                        direction="row"
-                        spacing={{ xs: 1, sm: 2, md: 3 }}
-                        justifyContent={"space-around"}
-                      >
-                        <Image
-                          style={{
-                            textAlign: "center",
-                            width: "75px",
-                            height: "75px",
-                          }}
-                          src={item}
-                          alt="SKILL"
-                        />
-                      </Stack>
-                    </Grid>
-                  ))}
-                </Grid>
-              </TabPanel>
-            </TabContext>
-          </Box>
+              </Carousel>
+            </Tab>
+            <Tab eventKey="profile" title="Descripción">
+              {item.description.map((desc, index) => (
+                <Typography variant="body1" gutterBottom>
+                  {desc}
+                </Typography>
+              ))}
+            </Tab>
+            <Tab eventKey="contact" title="Skills">
+              <Grid container rowSpacing={5}>
+                {item.skills.map((item, index) => (
+                  <Grid item xs={12} sm={4} md={3} key={index}>
+                    <Stack
+                      direction="row"
+                      spacing={{ xs: 1, sm: 2, md: 3 }}
+                      justifyContent={"space-around"}
+                    >
+                      <Image
+                        style={{
+                          textAlign: "center",
+                          width: "75px",
+                          height: "75px",
+                        }}
+                        src={item}
+                        alt="SKILL"
+                      />
+                    </Stack>
+                  </Grid>
+                ))}
+              </Grid>
+            </Tab>
+          </Tabs>
         </DialogContent>
       </BootstrapDialog>
     </div>

@@ -19,7 +19,7 @@ const ImageStyle = styled(Image)`
   background-color: ${({ theme }) => theme.about.bgcImg};
 `;
 const ButtonStyle = styled(Button)`
-  background: ${({ theme }) => theme.about.bgcButton};
+  background-color: ${({ theme }) => theme.about.bgcButton};
 `;
 
 export default function About() {
@@ -49,8 +49,8 @@ export default function About() {
                       textAlign: "center",
                       padding: "2%",
                     }}
-                    width= "100%"
-                    height= "auto"
+                    width="100%"
+                    height="auto"
                     src="https://us.123rf.com/450wm/dotshock/dotshock1602/dotshock160200726/52352665-negocio-de-inicio-desarrollador-de-software-trabajando-en-equipo-en-la-oficina-moderna.jpg?ver=6"
                     alt="JRV"
                   />
@@ -65,12 +65,15 @@ export default function About() {
                   <br />
                   <br />
                 </Typography>
-                <ButtonStyle
-                  variant="outline-light"
-                  onClick={() => window.open("/CV Resumen Jesus Romero.pdf")}
-                >
-                  {t("about.button")}
-                </ButtonStyle>
+                <div style={{color: "#000"}}>
+                  <ButtonStyle
+                    variant="outline-light"
+                    onClick={() => window.open("/CV Resumen Jesus Romero.pdf")}
+                    style={{color: "#1C2130"}}
+                  >
+                    {t("about.button")}
+                  </ButtonStyle>
+                </div>
               </Col>
             </Row>
           </Box>

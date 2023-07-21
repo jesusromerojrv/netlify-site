@@ -3,7 +3,7 @@ const LightTheme = {
         bgc: "#fff",
         color: "#000",
         bgcImg: "#EBECEC",
-        bgcButton: "#000"
+        bgcButton: "#efb810"
     },
     hero: {
         bgc: "#EBECEC",

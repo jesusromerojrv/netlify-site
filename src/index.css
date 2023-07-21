@@ -1,9 +1,8 @@
 .cardInfo {
- margin-bottom: 2%;
+  margin-bottom: 2%;
 }
 .contCards {
-  background-color: #1C2130
-  ;
+  background-color: #1c2130;
   /*"#F6ECEC"*/
 }
 .asdf {
@@ -32,6 +31,10 @@
 .responsive2 {
   width: "150px";
   height: "150px";
+}
+#dialog {
+  width: "600px";
+  height: "500px";
 }
 @media screen and (max-width: 1100px) {
   .cardInfo {

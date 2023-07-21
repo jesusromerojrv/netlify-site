@@ -51,7 +51,7 @@ export default function Header(props) {
               </Button>
             </Box>
             <Box sx={{marginLeft: "1%"}}>
-              <CustomizedSwitches theme={props.theme} setTheme={props.setTheme}/>
+              <CustomizedSwitches id="sw" theme={props.theme} setTheme={props.setTheme}/>
             </Box>
           </Toolbar>
         </AppBar>
