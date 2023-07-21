@@ -74,7 +74,7 @@ export default function CustomizedSwitches(props) {
     <Box>
       <FormGroup>
         <FormControlLabel
-          control={<MaterialUISwitch checked={checked} />}
+          control={<MaterialUISwitch id="switchTheme" checked={checked} />}
           onChange={handleChange}
           onClick={colorMode.toggleColorMode}
         />

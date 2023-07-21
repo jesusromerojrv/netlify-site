@@ -1,4 +1,4 @@
-import bannerImg from "../assets/perfil.png";
+import bannerImg from "../assets/perfil.webp";
 import perfilResponsive from "../assets/img.png";
 import * as React from "react";
 import Button from "@mui/material/Button";

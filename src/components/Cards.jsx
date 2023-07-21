@@ -22,6 +22,7 @@ import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
+import Stack from "@mui/material/Stack";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -138,9 +139,9 @@ export default function Cards() {
           </Grid>
         </Row>
       </Container>
-      {
-        open ? <Venta open={open} handleClose={handleClose} item={elementos} /> : null
-      }
+      {open ? (
+        <Venta open={open} handleClose={handleClose} item={elementos} />
+      ) : null}
     </DivStyle>
   );
 }
@@ -165,45 +166,69 @@ export function Venta({ open, handleClose, item }) {
         >
           {item.title}
         </BootstrapDialogTitle>
-        <DialogContent dividers style={{}}>
-          <Carousel>
-            {item.moreImg?.map((x, index) => (
-              <Carousel.Item key={index} interval={5000}>
-                <Image
-                  style={{
-                    objectFit: "cover",
-                    width: "100%",
-                    height: "100%",
-                  }}
-                  src={x}
-                  alt={index}
-                />
-              </Carousel.Item>
-            ))}
-          </Carousel>
-          <Typography
-            variant="h6"
-            gutterBottom
-            sx={{
-              marginTop: "5%",
-              fontSize: "22px",
-              textAlign: "justify",
-              color: "#efb810",
-            }}
-          >
-            <b>Descripción: </b>
-          </Typography>
-          <Typography
-            variant="body1"
-            gutterBottom
-            sx={{
-              padding: "1%",
-              fontSize: "18px",
-              textAlign: "justify",
-            }}
-          >
-            {item.description}
-          </Typography>
+        <DialogContent dividers style={{ height: "500px", width: "600px" }}>
+          <Box sx={{ width: "100%", typography: "body1" }}>
+            <TabContext value={value}>
+              <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+                <TabList
+                  onChange={handleChange}
+                  aria-label="lab API tabs example"
+                >
+                  <Tab label="Imágenes" value="1" />
+                  <Tab label="Descripción" value="2" />
+                  <Tab label="Tecnologías" value="3" />
+                </TabList>
+              </Box>
+              <TabPanel value="1">
+                {" "}
+                <Carousel>
+                  {item.moreImg?.map((x, index) => (
+                    <Carousel.Item key={index} interval={5000}>
+                      <Image
+                        style={{
+                          objectFit: "cover",
+                          width: "100%",
+                          height: "100%",
+                        }}
+                        src={x}
+                        alt={index}
+                      />
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
+              </TabPanel>
+              <TabPanel value="2">
+                {item.description.map((desc, index) => (
+                  <Typography variant="body1" gutterBottom>
+                    {desc}
+                  </Typography>
+                ))}
+              </TabPanel>
+              <TabPanel value="3">
+                <Grid container rowSpacing={5}>
+                  {item.skills.map((item, index) => (
+                    <Grid item xs={12} sm={4} md={3} key={index}>
+                      <Stack
+                        direction="row"
+                        spacing={{ xs: 1, sm: 2, md: 3 }}
+                        justifyContent={"space-around"}
+                      >
+                        <Image
+                          style={{
+                            textAlign: "center",
+                            width: "75px",
+                            height: "75px",
+                          }}
+                          src={item}
+                          alt="SKILL"
+                        />
+                      </Stack>
+                    </Grid>
+                  ))}
+                </Grid>
+              </TabPanel>
+            </TabContext>
+          </Box>
         </DialogContent>
       </BootstrapDialog>
     </div>
