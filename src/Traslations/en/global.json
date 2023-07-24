@@ -25,7 +25,9 @@
     },
     "contact": {
         "title": "CONTACT ME",
+        "name": "Name",
         "email": "Email",
+        "subject": "Subject",
         "message": "Write your message",
         "button": "SEND"
     },

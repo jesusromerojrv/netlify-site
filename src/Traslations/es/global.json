@@ -25,7 +25,9 @@
     },
     "contact": {
         "title": "CONTACTO",
+        "name": "Nombre",
         "email": "Correo Electronico",
+        "subject": "Asunto",
         "message": "Escribe tu mensaje",
         "button": "ENVIAR"
     },

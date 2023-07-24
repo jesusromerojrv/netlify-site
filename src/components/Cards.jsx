@@ -27,9 +27,9 @@ import { Skeleton } from "@mui/material";
 import { useState, useEffect } from "react";
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#000",
   ...theme.typography.body2,
-  padding: theme.spacing(1),
+  padding: theme.spacing(.6),
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));
@@ -121,7 +121,7 @@ export default function Cards() {
               ) => (
                 <Grid item xs={12} sm={12} md={4} key={index}>
                   <Item
-                    style={{ height: "250px", }}
+                    style={{ height: "250px", position: "relative" }}
                     onClick={() => handleClickOpen(item)}
                   >
                     <Image
@@ -130,10 +130,12 @@ export default function Cards() {
                         width: "100%",
                         height: "100%",
                         cursor: "pointer",
+                        opacity: "0.6"
                       }}
                       src={item.img}
                       alt={item.title}
                     />
+                    <p style={{position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", color: "#efb810", fontWeight: "bold", cursor: "pointer", fontSize: "1.3rem"}}>VER MÁS</p>
                   </Item>
                 </Grid>
               )
@@ -142,7 +144,7 @@ export default function Cards() {
         </Row>
       </Container>
       {open ? (
-        <Venta open={open} handleClose={handleClose} item={elementos} />
+        <Venta open={open} handleClose={handleClose} item={elementos}/>
       ) : null}
     </DivStyle>
   );
