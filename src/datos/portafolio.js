@@ -53,20 +53,31 @@ import img10 from "../assets/skills/git.webp";
 import img11 from "../assets/skills/java.webp";
 import img12 from "../assets/skills/python.webp";
 
+
 export const proyectos = [
   {
     id: "1",
     img: p1,
     title: "FAZ - UJED",
-    description: [
-      "Actualizacion del portal electronico de la universidad, implementando nuevas tecnologias.",
-      "Este proyecto se elaboro utilizando vue como framework acompañado de vuetify y bootstrap, para el desarrollo se utilizaron archivos json en los cuales se alamaceno la información tanto de los estudiantes como los docentes",
-      "Las fases que se siguieron para la elaboracion son las siguientes:",
+    descriptionEs: [
+      "Actualización del portal electrónico de la universidad, implementando nuevas tecnologías.",
+      "Este proyecto se elaboró utilizando Vue como framework acompañado de Vuetify y Bootstrap, para el desarrollo se utilizaron archivos Json en los cuales se almacenó la información tanto de los estudiantes como los docentes.",
+      "Las fases que se siguieron para la elaboración son las siguientes:",
       "1. Recopilación de datos.",
       "2. Planificación.",
       "3. Diseño.",
       "4. Desarrollo.",
       "5. Pruebas.",
+    ],
+    descriptionEn: [
+      "Update of the electronic portal of the university, implementing new technologies.",
+      "This project was developed using Vue as a framework accompanied by Vuetify and Bootstrap, for the development Json files were used in which the information of both students and teachers was stored.",
+      "The phases followed for the elaboration are the following:",
+      "1. Data Collection.",
+      "2. Planning.",
+      "3. Design.",
+      "4. Development.",
+      "5. Tests.",
     ],
     moreImg: [p1_1, p1_2, p1_3, p1_4, p1_5, p1_6],
     skills: [img1, img2, img3, img4],
@@ -75,15 +86,25 @@ export const proyectos = [
     id: "2",
     img: p3,
     title: "FAZ Posgrado - UJED",
-    description: [
-      "Actualizacion del portal electronico de la universidad, implementando nuevas tecnologias.",
-      "Este proyecto se elaboro utilizando vue como framework acompañado de vuetify y bootstrap, para el desarrollo se utilizaron archivos json en los cuales se alamaceno la información tanto de los estudiantes como los docentes",
-      "Las fases que se siguieron para la elaboracion son las siguientes:",
+    descriptionEs: [
+      "Actualización del portal electrónico de la universidad, implementando nuevas tecnologías.",
+      "Este proyecto se elaboró utilizando Vue como framework acompañado de Vuetify y Bootstrap, para el desarrollo se utilizaron archivos json en los cuales se almacenó la información tanto de los estudiantes como los docentes.",
+      "Las fases que se siguieron para la elaboración son las siguientes:",
       "1. Recopilación de datos.",
       "2. Planificación.",
       "3. Diseño.",
       "4. Desarrollo.",
       "5. Pruebas.",
+    ],
+    descriptionEn: [
+      "Update of the electronic portal of the university, implementing new technologies.",
+      "This project was developed using Vue as a framework accompanied by Vuetify and Bootstrap, for the development Json files were used in which the information of both students and teachers was stored.",
+      "The phases followed for the elaboration are the following:",
+      "1. Data Collection.",
+      "2. Planning.",
+      "3. Design.",
+      "4. Development.",
+      "5. Tests.",
     ],
     moreImg: [p3_1, p3_2, p3_3, p3_4, p3_5, p3_6, p3_7],
     skills: [img1, img2, img3, img4],
@@ -92,10 +113,19 @@ export const proyectos = [
     id: "3",
     img: p2,
     title: "Kittenbook",
-    description: [
-      "Software enfocado a la organización de los estudiantes, se puede añadir todo lo relacionado a algúna materia como por ejemplo, creditos complementarios, notas, tareas, calificación.",
-      "El proyecto utiliza MySQL como base de datos y React como framework principal",
+    descriptionEs: [
+      "Software enfocado a la organización de los estudiantes, se puede añadir todo lo relacionado a alguna materia como, por ejemplo, créditos complementarios, notas, tareas, calificación.",
+      "El proyecto utiliza MySQL como base de datos y React como framework principal.",
       "Las tecnologías que se usaron fue la pila MERN:",
+      "- MySQL",
+      "- Express",
+      "- React",
+      "- NodeJS",
+    ],
+    descriptionEn: [
+      "Software focused on the organization of students, you can add everything related to a subject, such as complementary credits, grades, homework, grades.",
+      "The project uses MySQL as the database and React as the main framework.",
+      "The technologies that were used was the MERN stack:",
       "- MySQL",
       "- Express",
       "- React",
@@ -121,10 +151,19 @@ export const proyectos = [
     id: "4",
     img: p4,
     title: "Sistema",
-    description: [
-      "Sistema de compra y venta de articulos, en el cúal se tienen tres roles: administrador, vendedor y comprador. Cada rol tiene ciertas funcionalidades disponibles a excepcion del administrador.",
+    descriptionEs: [
+      "Sistema de compra y venta de artículos, en el cual se tienen tres roles: administrador, vendedor y comprador. Cada rol tiene ciertas funcionalidades disponibles a excepción del administrador.",
       "El proyecto utiliza MongoDB como base de datos y Vue como framework principal",
       "Las tecnologías que se usaron fue la pila MEVN:",
+      "- MongoDB",
+      "- Express",
+      "- Vue",
+      "- NodeJS",
+    ],
+    descriptionEn: [
+      "Item buying and selling system, in which there are three roles: administrator, seller and buyer. Each role has certain functionalities available with the exception of the administrator.",
+      "The project uses MongoDB as the database and Vue as the main framework.",
+      "The technologies that were used was the MEVN stack:",
       "- MongoDB",
       "- Express",
       "- Vue",

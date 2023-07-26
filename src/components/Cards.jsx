@@ -86,7 +86,7 @@ export default function Cards() {
     setOpen(true);
     asf = JSON.stringify(e);
     setElementos(JSON.parse(asf));
-    console.log(elementos);
+    //console.log(elementos);
   };
   const handleClose = () => {
     setOpen(false);
@@ -135,7 +135,7 @@ export default function Cards() {
                       src={item.img}
                       alt={item.title}
                     />
-                    <p style={{position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", color: "#efb810", fontWeight: "bold", cursor: "pointer", fontSize: "1.3rem"}}>VER MÁS</p>
+                    <p style={{position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", color: "#efb810", fontWeight: "bold", cursor: "pointer", fontSize: "1.3rem"}}>{t("card.main")}</p>
                   </Item>
                 </Grid>
               )
@@ -152,15 +152,18 @@ export default function Cards() {
 
 export function Venta({ open, handleClose, item }) {
   const [value, setValue] = React.useState("1");
-
+  const [t, i18n] = useTranslation("global");
+  
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   const [loading, setLoading] = useState(true);
+  const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
+      setDisabled(false);
     }, 2000);
   }, []);
   return (
@@ -190,7 +193,7 @@ export function Venta({ open, handleClose, item }) {
             id="noanim-tab-example"
             className="mb-3"
           >
-            <Tab eventKey="home" title="Imagenes">
+            <Tab eventKey="home" title={t("card.images")}>
               <Carousel>
                 {item.moreImg?.map((x, index) => (
                   <Carousel.Item key={index} interval={5000}>
@@ -218,14 +221,24 @@ export function Venta({ open, handleClose, item }) {
                 ))}
               </Carousel>
             </Tab>
-            <Tab eventKey="profile" title="Descripción">
-              {item.description.map((desc, index) => (
-                <Typography variant="body1" gutterBottom>
-                  {desc}
-                </Typography>
-              ))}
+            <Tab eventKey="profile" title={t("card.description")} disabled={disabled}>
+              {
+              i18n.language === "es" ? (
+                item.descriptionEs.map((desc, index) => (
+                  <Typography variant="body1" gutterBottom key={index}>
+                    {desc}
+                  </Typography>
+                ))
+              ) : (
+                item.descriptionEn.map((desc, index) => (
+                  <Typography variant="body1" gutterBottom key={index}>
+                    {desc}
+                  </Typography>
+                ))
+              )
+              }
             </Tab>
-            <Tab eventKey="contact" title="Skills">
+            <Tab eventKey="contact" title={t("card.skills")} disabled={disabled}>
               <Grid container rowSpacing={5}>
                 {item.skills.map((item, index) => (
                   <Grid item xs={12} sm={4} md={3} key={index}>

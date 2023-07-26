@@ -34,5 +34,11 @@
     "footer": {
         "email": "Email",
         "phone": "Phone"
+    },
+    "card": {
+        "main": "MORE",
+        "images": "Images",
+        "description": "Description",
+        "skills": "Technologies"
     }
 }
